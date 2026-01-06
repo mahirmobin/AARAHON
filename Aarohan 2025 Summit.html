@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarohan 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', 'Geist', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section - Full Screen Image */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(99,102,241,0.1)" stroke-width="1"/></pattern></defs><rect width="1200" height="800" fill="black"/><rect width="1200" height="800" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            padding: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 10vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 50%, #ffa060 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .cta-section {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .btn-outline:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* Sticky Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 1rem 2rem;
+        }
+
+        .event-card {
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(255, 140, 66, 0.05) 100%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card {
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 3rem 2rem;
+            background: rgba(255, 107, 53, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .registration-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: rgba(255, 107, 53, 0.05);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 3rem;
+        }
+
+        .speaker-card {
+            text-align: center;
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            padding: 2rem;
+            background: rgba(255, 107, 53, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .speaker-card:hover {
+            border-color: #ff6b35;
+            background: rgba(255, 107, 53, 0.1);
+            transform: translateY(-10px);
+        }
+
+        .footer-section a:hover {
+            color: #ff6b35;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #ff6b35;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        /* Section Spacing */
+        .section {
+            padding: 10rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title .gradient {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About Section */
+        .about-section {
+            background: rgba(30, 41, 59, 0.5);
+            padding-top: 15rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 3rem 2rem;
+            background: rgba(99, 102, 241, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            border-color: #ff6b35;
+            background: rgba(255, 107, 53, 0.1);
+            transform: translateY(-10px);
+        }
+
+        .about-card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #ff6b35;
+        }
+
+        .about-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        /* Events Section */
+        .events-section {
+            background: #000;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .event-card {
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.3) 0%, transparent 70%);
+            transition: all 0.3s ease;
+        }
+
+        .event-card:hover::before {
+            top: -30%;
+            right: -30%;
+        }
+
+        .event-card:hover {
+            border-color: #ff8c42;
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(255, 140, 66, 0.3);
+        }
+
+        .event-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .event-tag {
+            display: inline-block;
+            background: rgba(255, 107, 53, 0.2);
+            color: #ff6b35;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .event-card h3 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .event-card p {
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .event-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        .timeline-container {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            position: relative;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-date {
+            color: #ff6b35;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .timeline-content p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        /* Speakers Section */
+        .speakers-section {
+            background: #000;
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .speaker-card {
+            text-align: center;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            padding: 2rem;
+            background: rgba(99, 102, 241, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .speaker-card:hover {
+            border-color: #6366f1;
+            background: rgba(99, 102, 241, 0.1);
+            transform: translateY(-10px);
+        }
+
+        .speaker-avatar {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            transition: all 0.3s ease;
+        }
+
+        .speaker-card:hover .speaker-avatar {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255, 107, 53, 0.5);
+        }
+
+        .speaker-card h3 {
+            font-size: 1.3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .speaker-role {
+            color: #ff6b35;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .speaker-bio {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Registration Section */
+        .registration-section {
+            background: rgba(30, 41, 59, 0.5);
+            text-align: center;
+        }
+
+        .registration-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            color: #cbd5e1;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(15, 23, 42, 0.5);
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            color: white;
+            border: none;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            display: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .form-message.success {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 1px solid #10b981;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #6366f1;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 2rem 0;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 700;
+        }
+
+        .social-links a:hover {
+            background: #ff6b35;
+            border-color: #ff6b35;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 5rem 1.5rem;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AAROHAN</div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Rise to the<br><span class="gradient-text">Challenge</span></h1>
+            <p class="hero-subtitle">Aarohan 2025: Where Innovation Meets Ambition. A premier tech summit bringing together builders, creators, and thinkers.
+                March 23-26
+            </p>
+            <div class="cta-section">
+                <button class="btn btn-primary" onclick="document.getElementById('register').scrollIntoView({behavior: 'smooth'})">Register Now</button>
+                <button class="btn btn-outline" onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})">Explore Events</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <h2 class="section-title">What is <span class="gradient">Aarohan?</span></h2>
+        <div class="about-grid">
+            <div class="about-card" onmouseover="this.style.background='rgba(255, 107, 53, 0.15)'" onmouseout="this.style.background='rgba(255, 107, 53, 0.05)'">
+                <div class="about-card-icon"></div>
+                <h3>Innovation</h3>
+                <p>Showcase groundbreaking ideas and technical solutions to real-world problems.</p>
+            </div>
+            <div class="about-card" onmouseover="this.style.background='rgba(255, 107, 53, 0.15)'" onmouseout="this.style.background='rgba(255, 107, 53, 0.05)'">
+                <div class="about-card-icon"></div>
+                <h3>Acceleration</h3>
+                <p>Get mentorship from industry leaders and accelerate your learning journey.</p>
+            </div>
+            <div class="about-card" onmouseover="this.style.background='rgba(255, 107, 53, 0.15)'" onmouseout="this.style.background='rgba(255, 107, 53, 0.05)'">
+                <div class="about-card-icon"></div>
+                <h3>Collaboration</h3>
+                <p>Network with peers and create lasting professional connections.</p>
+            </div>
+            <div class="about-card" onmouseover="this.style.background='rgba(255, 107, 53, 0.15)'" onmouseout="this.style.background='rgba(255, 107, 53, 0.05)'">
+                <div class="about-card-icon"></div>
+                <h3>Recognition</h3>
+                <p>Compete for prizes and opportunities to launch your startup.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section events-section" id="events">
+        <h2 class="section-title">Featured <span class="gradient">Events</span></h2>
+        <div class="events-grid">
+            <div class="event-card" onclick="this.style.transform='scale(1.02)'" onmouseover="this.style.boxShadow='0 30px 80px rgba(255, 107, 53, 0.4)'" onmouseout="this.style.boxShadow='0 30px 60px rgba(255, 140, 66, 0.3)'">
+                <div class="event-card-content">
+                    <div class="event-tag">Technical</div>
+                    <h3>Hackathon</h3>
+                    <p>24-hour intensive coding challenge. Build, innovate, and compete with talented developers.</p>
+                    <div class="event-meta">
+                        <span>📅 Day 1-2</span>
+                        <span>💪 Advanced</span>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card" onclick="this.style.transform='scale(1.02)'" onmouseover="this.style.boxShadow='0 30px 80px rgba(255, 107, 53, 0.4)'" onmouseout="this.style.boxShadow='0 30px 60px rgba(255, 140, 66, 0.3)'">
+                <div class="event-card-content">
+                    <div class="event-tag">Design</div>
+                    <h3>Design Jam</h3>
+                    <p>Create stunning UI/UX designs for real-world problems. Show your creativity.</p>
+                    <div class="event-meta">
+                        <span>📅 Day 2</span>
+                        <span>🎨 All Levels</span>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card" onclick="this.style.transform='scale(1.02)'" onmouseover="this.style.boxShadow='0 30px 80px rgba(255, 107, 53, 0.4)'" onmouseout="this.style.boxShadow='0 30px 60px rgba(255, 140, 66, 0.3)'">
+                <div class="event-card-content">
+                    <div class="event-tag">Innovation</div>
+                    <h3>Startup Pitch</h3>
+                    <p>Present your startup idea to investors. Win seed funding and mentorship.</p>
+                    <div class="event-meta">
+                        <span>📅 Day 3</span>
+                        <span>⭐ Premium</span>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card" onclick="this.style.transform='scale(1.02)'" onmouseover="this.style.boxShadow='0 30px 80px rgba(255, 107, 53, 0.4)'" onmouseout="this.style.boxShadow='0 30px 60px rgba(255, 140, 66, 0.3)'">
+                <div class="event-card-content">
+                    <div class="event-tag">Workshop</div>
+                    <h3>Tech Workshops</h3>
+                    <p>Learn from industry experts. Explore AI, ML, Cloud, DevOps, and cutting-edge tech.</p>
+                    <div class="event-meta">
+                        <span>📅 Day 1-3</span>
+                        <span>🧠 Learning</span>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card" onclick="this.style.transform='scale(1.02)'" onmouseover="this.style.boxShadow='0 30px 80px rgba(255, 107, 53, 0.4)'" onmouseout="this.style.boxShadow='0 30px 60px rgba(255, 140, 66, 0.3)'">
+                <div class="event-card-content">
+                    <div class="event-tag">Gaming</div>
+                    <h3>Gaming Tournament</h3>
+                    <p>Competitive gaming tournaments with cash prizes. Multiple game titles.</p>
+                    <div class="event-meta">
+                        <span>📅 Day 2-3</span>
+                        <span>🎮 Entertainment</span>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card" onclick="this.style.transform='scale(1.02)'" onmouseover="this.style.boxShadow='0 30px 80px rgba(255, 107, 53, 0.4)'" onmouseout="this.style.boxShadow='0 30px 60px rgba(255, 140, 66, 0.3)'">
+                <div class="event-card-content">
+                    <div class="event-tag">Talk</div>
+                    <h3>Panel Discussions</h3>
+                    <p>Insightful conversations with tech leaders and innovators shaping the future.</p>
+                    <div class="event-meta">
+                        <span>📅 Daily</span>
+                        <span>💬 Networking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section timeline-section" id="timeline">
+        <h2 class="section-title">Event <span class="gradient">Timeline</span></h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-date">January 15</div>
+                <div class="timeline-content">
+                    <h4>Registration Opens</h4>
+                    <p>Early bird discount available for first 100 registrations</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">February 10</div>
+                <div class="timeline-content">
+                    <h4>Speaker Announcement</h4>
+                    <p>Meet the industry leaders and experts who will guide you</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">February 28</div>
+                <div class="timeline-content">
+                    <h4>Registration Closes</h4>
+                    <p>Final deadline to confirm your participation</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">March 15-17</div>
+                <div class="timeline-content">
+                    <h4>Main Event</h4>
+                    <p>3 days of competitions, workshops, and networking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="section speakers-section" id="speakers">
+        <h2 class="section-title">Featured <span class="gradient">Speakers</span></h2>
+        <div class="speakers-grid">
+            <div class="speaker-card">
+                <div class="speaker-avatar"></div>
+                <h3>Alex Chen</h3>
+                <div class="speaker-role">Founder & CEO</div>
+                <p class="speaker-bio">Serial entrepreneur with 2 successful exits. Passionate about building products that scale.</p>
+            </div>
+            <div class="speaker-card">
+                <div class="speaker-avatar"></div>
+                <h3>Sarah Johnson</h3>
+                <div class="speaker-role">ML Engineer</div>
+                <p class="speaker-bio">Expert in AI/ML with 10+ years experience. Published researcher and tech speaker.</p>
+            </div>
+            <div class="speaker-card">
+                <div class="speaker-avatar"></div>
+                <h3>Marcus Williams</h3>
+                <div class="speaker-role">Design Director</div>
+                <p class="speaker-bio">Award-winning designer. Passionate about user-centric design and accessibility.</p>
+            </div>
+            <div class="speaker-card">
+                <div class="speaker-avatar"></div>
+                <h3>Priya Patel</h3>
+                <div class="speaker-role">DevOps Lead</div>
+                <p class="speaker-bio">Infrastructure expert. Helping companies scale to millions of users.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="section registration-section" id="register">
+        <h2 class="section-title">Get Your <span class="gradient">Ticket</span></h2>
+        <form class="registration-form" id="registrationForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+                <label for="college">College/Organization</label>
+                <input type="text" id="college" name="college" required placeholder="Benedict College">
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="">Select Category</option>
+                    <option value="student">Student</option>
+                    <option value="professional">Working Professional</option>
+                    <option value="entrepreneur">Entrepreneur</option>
+                    <option value="speaker">Speaker/Mentor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="track">Interested Track</label>
+                <select id="track" name="track" required>
+                    <option value="">Select Track</option>
+                    <option value="hackathon">Hackathon</option>
+                    <option value="design">Design Jam</option>
+                    <option value="startup">Startup Pitch</option>
+                    <option value="workshop">Workshops Only</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Register Now</button>
+            <div class="form-message" id="formMessage"></div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Aarohan</h4>
+                <ul>
+                    <li><a href="#about">What is Aarohan?</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#speakers">Speakers</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#register">Tickets & Pricing</a></li>
+                    <li><a href="#speakers">Call for Speakers</a></li>
+                    <li><a href="#register">Call for Volunteers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:info@aarohan.edu">info@aarohan.edu</a></li>
+                    <li><a href="#">Benedict College of Engineering</a></li>
+                    <li><a href="#">Engineering and Technology</a></li>
+                    <li><a href="#">+91-XXXX-XXXXXX</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="#" title="Twitter">𝕏</a>
+            <a href="#" title="LinkedIn">in</a>
+            <a href="#" title="Instagram">📸</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Made by Mahir</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.style.display = 'none';
+            });
+        });
+
+        const registrationForm = document.getElementById('registrationForm');
+        const formMessage = document.getElementById('formMessage');
+
+        registrationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const category = document.getElementById('category').value;
+            const track = document.getElementById('track').value;
+
+            if (!name || !email || !category || !track) {
+                formMessage.textContent = 'Please fill in all fields.';
+                formMessage.classList.remove('success');
+                return;
+            }
+
+            formMessage.textContent = `✓ Thanks for registering, ${name}! Check your email for confirmation.`;
+            formMessage.classList.add('success');
+            registrationForm.reset();
+
+            setTimeout(() => {
+                formMessage.classList.remove('success');
+            }, 5000);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
